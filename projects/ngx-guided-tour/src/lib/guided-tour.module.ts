@@ -5,17 +5,17 @@ import { CommonModule } from '@angular/common';
 import { WindowRefService } from './windowref.service';
 
 @NgModule({
-  declarations: [GuidedTourComponent],
-  imports: [CommonModule],
-  providers: [WindowRefService],
-  exports: [GuidedTourComponent],
-  entryComponents: [GuidedTourComponent],
+    declarations: [GuidedTourComponent],
+    imports: [CommonModule],
+    providers: [WindowRefService],
+    exports: [GuidedTourComponent],
+    entryComponents: [GuidedTourComponent]
 })
 export class GuidedTourModule {
-  public static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: GuidedTourModule,
-      providers: [ErrorHandler, GuidedTourService],
-    };
-  }
+    public static forRoot(): ModuleWithProviders<GuidedTourModule> {
+        return {
+            ngModule: GuidedTourModule,
+            providers: [ErrorHandler, GuidedTourService]
+        };
+    }
 }
